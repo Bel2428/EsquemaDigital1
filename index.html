@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esquema digital de: Estilos y paradigmas de interacción</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Patrick+Hand&display=swap">
+<style>
+:root{--paper:#fbfbfd;--bg:#a9b8d6;--grid:rgba(0,0,0,.12);--ink:#15151f;--pt:#1c1c28;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;height:100%;overflow:hidden;color:var(--ink);background:var(--bg);font-family:"Patrick Hand","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.35}
+.vp{height:100%;overflow:auto;-webkit-overflow-scrolling:touch;background:var(--bg);scrollbar-color:var(--ink) var(--grid);scrollbar-width:auto}
+.vp::-webkit-scrollbar{width:16px;height:16px}
+.vp::-webkit-scrollbar-track{background:var(--grid)}
+.vp::-webkit-scrollbar-thumb{background:var(--ink);border-radius:10px;border:3px solid var(--bg)}
+.vp::-webkit-scrollbar-corner{background:var(--bg)}
+main{min-width:1500px;max-width:1560px;margin:0 auto;padding:22px 14px 40px}
+.grid{display:flex;flex-direction:column;gap:22px}
+.center{order:-2;background:var(--ink);color:var(--paper);border-radius:26px 18px 28px 16px/18px 26px 16px 28px;padding:22px 20px;text-align:center;font:800 clamp(1.5rem,6.5vw,2.1rem)/1.15 Sniglet,"Arial Rounded MT Bold",system-ui,sans-serif}
+.center span{display:block;font:400 .55em "Patrick Hand",sans-serif;margin-bottom:6px;opacity:.85}
+.col.right{order:-1}
+h2{display:inline-block;margin:0 0 14px;padding:8px 18px;border-radius:30px 18px 28px 16px;background:var(--ink);color:var(--paper);font:800 1rem Sniglet,system-ui,sans-serif;text-transform:uppercase}
+.group{display:flex;flex-direction:column;gap:20px;border-left:3px solid var(--ink);border-radius:32px 0 0 32px;padding:8px 0 8px 22px;margin-left:12px}
+.it{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.lab,.box{background:var(--c);color:var(--pt);border-radius:26px 16px 28px 14px/18px 26px 16px 28px;position:relative}
+.it:nth-child(even) .lab,.it:nth-child(even) .box{border-radius:16px 28px 14px 26px/28px 16px 26px 18px}
+.lab{font:800 1.05rem/1.1 Sniglet,system-ui,sans-serif;text-transform:uppercase;padding:13px 20px;text-align:center}
+.lab small{display:block;font:400 .78rem "Patrick Hand",sans-serif;text-transform:none;margin-top:3px;opacity:.85}
+.lab::after{content:"";position:absolute;top:50%;left:-22px;width:22px;border-top:3px solid var(--ink)}
+.box{padding:14px 18px;max-width:440px}
+.box p{margin:0 0 6px}.box ul{margin:0 0 8px;padding-left:20px}.box li{margin:1px 0}
+.eh{font:800 .72rem Sniglet,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:6px 0 2px;opacity:.7}
+.box a{display:block;margin-top:6px;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.55);color:var(--pt);text-decoration:none;font-weight:700;word-break:break-word}
+.ic{width:104px;flex:none;display:flex;align-items:center;justify-content:center}
+.ic svg{width:100%;height:auto;fill:none;stroke:var(--ink);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.ic .f{fill:var(--c)}.ic .w{fill:var(--paper)}.ic .k{fill:var(--ink);stroke:none}.ic .t{fill:var(--ink);stroke:none;font:800 26px Sniglet,system-ui,sans-serif}
+.box a:hover{background:rgba(255,255,255,.85)}
+.grid{display:grid;grid-template-columns:1fr 250px 1fr;column-gap:44px;align-items:stretch}
+.center{order:0;align-self:center}
+.col{display:flex;flex-direction:column}.col.right{order:0}
+.col.left h2{align-self:flex-start}.col.right h2{align-self:flex-end}
+.group{flex:1;justify-content:space-around;position:relative;margin:0;border:0;border-radius:0;padding:6px 0;width:100%}
+.left .group{border-right:3px solid var(--ink);border-radius:0 34px 34px 0;padding-right:20px}
+.right .group{border-left:3px solid var(--ink);border-radius:34px 0 0 34px;padding-left:20px}
+.left .group::after,.right .group::after{content:"";position:absolute;top:50%;width:44px;border-top:3px solid var(--ink)}
+.left .group::after{right:-47px}.right .group::after{left:-47px}
+.it{flex-direction:row;align-items:center;gap:26px}
+.left .it{flex-direction:row-reverse;justify-content:flex-end}
+.lab{width:158px;flex:none}
+.box{max-width:none;flex:1}
+.box::before{content:"";position:absolute;top:50%;width:26px;border-top:3px solid var(--ink)}
+.left .box::before{right:-26px}.right .box::before{left:-26px}
+.left .lab::after{left:auto;right:-20px;width:20px}.right .lab::after{left:-20px;width:20px}
+</style>
+</head>
+<body>
+<div class="vp"><main>
+<div class="grid">
+<div class="col left"><h2>Paradigmas de interacción</h2><div class="group" id="gl"></div></div>
+<div class="center"><span>Esquema digital de:</span>Estilos y paradigmas de interacción</div>
+<div class="col right"><h2>Estilos de interacción</h2><div class="group" id="gr"></div></div>
+</div>
+</main></div>
+<script>
+var C=['#ffe0b3','#bde3f7','#ffd0c8','#f3e9a0','#ffc0e0','#c9f0b0','#d0d4fb','#b8f0e0','#e6cdf5'];
+var D=[
+{g:'gr',n:'CLI',s:'Interfaz de Línea de Comandos',d:'Es interactuar con una computadora escribiendo comandos de texto.',c:['Se utilizan comandos escritos.','Requiere conocer la sintaxis de los comandos.','Puede ser muy rápida para usuarios expertos.','Generalmente no utiliza elementos gráficos.'],x:[['Ejemplo: JSLinux','','https://bellard.org/jslinux/vm.html?cpu=x86_64&url=alpine-x86_64.cfg&mem=256']]},
+{g:'gr',n:'GUI',s:'Interfaz Gráfica de Usuario',d:'Es interactuar con un sistema mediante ventanas, botones, menús e iconos.',c:['Utiliza principalmente mouse, teclado o pantalla táctil.','Usa ventanas, botones, menús e iconos.','Es fácil de visualizar y aprender.','Es el tipo de interfaz más común en computadoras.'],x:[['Ejemplo: Windows XP Web','','https://windows-xp-web.web.app/']]},
+{g:'gr',n:'NUI',s:'Interfaz Natural de Usuario',d:'Permite controlar un sistema utilizando acciones naturales, como tocar, hablar o hacer gestos.',c:['Utiliza movimientos, gestos o contacto directo.','Puede utilizar la voz.','Busca que la interacción sea más natural.','Es común en teléfonos, tablets y dispositivos inteligentes.'],x:[['Ejemplo: Reconocedor de gestos de MediaPipe','','https://codepen.io/mediapipe-preview/pen/zYamdVd']]},
+{g:'gr',n:'OUI',s:'Interfaz de Usuario Orgánica',d:'Es una interfaz que permite interactuar directamente con objetos físicos, integrando la tecnología en ellos.',c:['Combina objetos físicos con tecnología.','La interacción ocurre sobre el propio objeto.','Puede cambiar o adaptarse según la interacción.','Puede utilizarse en objetos inteligentes y espacios interactivos.'],x:[['Ejemplo: Interfaz Orgánica de Usuario (OUI)','','https://bel2428.github.io/OUI1/']]},
+{g:'gl',n:'Sobremesa',s:'Paradigma de sobremesa',d:'Es la forma tradicional de interactuar con una computadora desde un escritorio, utilizando pantalla, teclado y mouse.',c:['Utiliza una pantalla como elemento principal.','Normalmente utiliza teclado y mouse.','Emplea ventanas, iconos, menús y archivos.','Está pensado para utilizarse desde un lugar fijo.'],x:[['Ejemplo: Infinite Mac (System 7.1)','','https://infinitemac.org/1992/System%207.1']]},
+{g:'gl',n:'Realidad aumentada',s:'Paradigma de realidad aumentada',d:'Agrega elementos digitales sobre el mundo real mientras sigues viendo el entorno físico.',c:['Combina el mundo real y elementos virtuales.','El usuario sigue viendo el entorno real.','Puede utilizar cámaras y sensores.','Los objetos virtuales pueden aparecer integrados en el espacio real.'],x:[['Ejemplo: Sesión AR inmersiva (WebXR)','','https://immersive-web.github.io/webxr-samples/immersive-ar-session.html'],['Ejemplo: Ejercicio de Realidad Aumentada Interactiva','','https://bel2428.github.io/RA/']]},
+{g:'gl',n:'Realidad virtual',s:'Paradigma de realidad virtual',d:'Crea un entorno completamente virtual en el que el usuario puede sentirse dentro de otro mundo.',c:['Utiliza normalmente un visor de realidad virtual.','Crea un entorno digital.','El entorno real queda prácticamente fuera de la experiencia.','Permite interactuar con objetos virtuales.'],x:[['Ejemplo: Sesión VR inmersiva (WebXR)','','https://immersive-web.github.io/webxr-samples/immersive-vr-session.html']]},
+{g:'gl',n:'Realidad extendida',s:'Paradigma de realidad extendida',d:'Es un concepto que engloba tecnologías que combinan o amplían la realidad, como la realidad aumentada y la realidad virtual.',c:['Incluye realidad aumentada, realidad virtual y otras experiencias inmersivas.','Puede combinar elementos reales y virtuales.','Permite diferentes niveles de interacción e inmersión.','Integra tecnologías digitales con el entorno físico o virtual.'],x:[['Ejemplo: Paradigma de Realidad Extendida (XR)','','https://bel2428.github.io/XR1/']]},
+{g:'gl',n:'Computación ubicua',s:'Paradigma de computación ubicua',d:'Es cuando la tecnología está integrada en el entorno y funciona de forma casi invisible, sin que tengas que estar pensando en la computadora.',c:['La tecnología está presente en diferentes lugares y objetos.','Puede funcionar de manera automática.','Utiliza sensores y dispositivos conectados.','Los dispositivos pueden comunicarse entre sí.','Busca que la tecnología se adapte al usuario y no al revés.'],x:[['Ejemplo: Computación ubicua','','https://bel2428.github.io/Ubicua/']]}
+];
+var IC=['<svg viewBox="0 0 96 96" aria-hidden="true"><rect class="f" x="8" y="16" width="80" height="64" rx="8"/><path d="M8 32h80"/><circle class="k" cx="18" cy="24" r="2"/><circle class="k" cx="27" cy="24" r="2"/><path d="M20 48l12 8-12 8M42 66h22"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><rect class="f" x="8" y="14" width="80" height="62" rx="6"/><path d="M8 28h80"/><rect class="w" x="16" y="36" width="18" height="14" rx="3"/><rect class="w" x="40" y="36" width="18" height="14" rx="3"/><rect class="w" x="64" y="36" width="16" height="14" rx="3"/><path class="w" d="M52 54v24l6-6 5 12 6-3-5-11h9z"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><path class="f" d="M38 86c-10-6-16-14-18-24-1-4 3-6 6-3l8 8V38c0-4 3-7 7-7s7 3 7 7v22c0-3 3-5 6-5s6 2 6 5c0-3 3-5 6-5s6 2 6 6v18c0 8-4 16-10 20z"/><path d="M33 24c7-8 19-8 26 0M27 16c10-11 32-11 42 0"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><path class="f" d="M12 30c14-10 24 6 36-2s24-10 34-2v34c-10-8-22-6-34 2s-22-8-36 2z"/><path d="M20 82c18 8 40 8 58 0M70 76l8 6-10 3"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><rect class="f" x="18" y="8" width="60" height="44" rx="5"/><rect class="w" x="24" y="14" width="48" height="32" rx="2"/><path d="M48 52v10M36 62h24"/><rect class="f" x="8" y="70" width="54" height="16" rx="4"/><path d="M16 78h4M25 78h4M34 78h4M43 78h4"/><rect class="f" x="70" y="68" width="16" height="22" rx="8"/><path d="M78 68v9"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><rect class="f" x="24" y="4" width="48" height="88" rx="9"/><rect class="w" x="30" y="14" width="36" height="64" rx="3"/><path class="f" d="M48 28l13 7v15l-13 7-13-7V35z"/><path d="M35 35l13 7 13-7M48 42v15M34 70h28"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><path class="f" d="M16 32h64a6 6 0 0 1 6 6v24a10 10 0 0 1-10 10H64c-5 0-8-5-16-5s-11 5-16 5H20A10 10 0 0 1 10 62V38a6 6 0 0 1 6-6z"/><circle class="w" cx="30" cy="52" r="10"/><circle class="w" cx="66" cy="52" r="10"/><path d="M10 46H3M86 46h7"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><circle class="f" cx="48" cy="48" r="32"/><text class="t" x="48" y="58" text-anchor="middle">XR</text><ellipse cx="48" cy="48" rx="46" ry="14" transform="rotate(-25 48 48)"/></svg>',
+'<svg viewBox="0 0 96 96" aria-hidden="true"><path class="f" d="M10 50L48 18l38 32v34H10z"/><path d="M32 54c9-9 23-9 32 0M39 62c6-6 12-6 18 0"/><circle class="k" cx="48" cy="70" r="3"/><circle class="w" cx="12" cy="16" r="6"/><circle class="w" cx="84" cy="12" r="6"/><circle class="w" cx="90" cy="70" r="5" style="display:none"/></svg>'];
+D.forEach(function(d,i){
+var a=document.createElement('article');a.className='it';a.style.setProperty('--c',C[i]);
+a.innerHTML='<div class="lab">'+d.n+'<small>'+d.s+'</small></div><div class="box"><p>'+d.d+'</p><div class="eh">Características</div><ul>'+d.c.map(function(c){return'<li>'+c+'</li>'}).join('')+'</ul><div class="eh">Ejemplo</div>'+d.x.map(function(x){return'<a href="'+x[2]+'" target="_blank" rel="noopener">'+x[0]+(x[1]?'<small>'+x[1]+'</small>':'')+'</a>'}).join('')+'</div><div class="ic">'+IC[i]+'</div>';
+document.getElementById(d.g).appendChild(a)});
+</script>
+</body>
+</html>
